@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Blog.Core.Common
 {
@@ -15,6 +16,7 @@ namespace Blog.Core.Common
         {
             lock (_objLock)
             {
+                Console.OutputEncoding = Encoding.UTF8;
                 ConsoleColor currentForeColor = Console.ForegroundColor;
                 Console.ForegroundColor = color;
                 Console.WriteLine(str);
